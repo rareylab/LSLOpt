@@ -1,0 +1,95 @@
+/*!
+@page installation Installation instructions
+
+This document describes the installation procedure for
+the LSLOpt library.
+
+@note
+Please note that this is a header only C++ library.
+There is no need for installation and
+you can directly use the header files in the folder `include`.
+However, the tests must be built using the instructions given in this document.
+
+@warning
+This library needs a C++-14 compiler!
+
+This package uses CMake for the build process. See
+the [CMake documentation] (https://cmake.org/documentation/)
+for general configuration options.
+
+The most useful option is `-DCMAKE_INSTALL_PREFIX=<your/target/path>` for changing
+the install directory.
+
+Core library
+============
+
+Prerequisites
+-------------
+
+The LSLOpt library is based on the [Eigen] (https://eigen.tuxfamily.org)
+library (>= 3.3) for matrix and vector operations.
+
+The build process needs [CMake] (https://cmake.org) (>= 3.1) and a C++-14 compiler
+(for example g++, clang++ or MSVC).
+Futhermore, the tests depend on the [Boost] (https://www.boost.org/) (>= 1.61) library
+and the [Googletest] (https://github.com/google/googletest) framework.
+
+The location of Eigen and Boost can be given by the options
+`-DEigen3_DIR=<eigen3_path>` or `-DBOOST_ROOT=<boost_path>`, respectively.
+Alternatively, the location of Eigen and Boost headers can be given by the options
+`-DEIGEN_INCLUDE_DIR=<include_path>` or `-DBOOST_INCLUDE_DIR=<include_path>`, respectively.
+The Googletest framework will be downloaded automatically.
+
+The build of the tests can be disabled using `-DLSLOpt_BUILD_TESTS=OFF`.
+However, in that case nothing will be built (because the library is header-only).
+
+
+Installation Unix and macOS
+---------------------------
+
+Installation on Unix using `make` and the system's default C++ compiler.
+
+    mkdir build
+    cd build
+    cmake .. -DCMAKE_BUILD_TYPE=Release
+    make install
+
+Test
+----
+
+Use the following commands to build and test the build
+of the core library. Testing is strongly recommended.
+
+    mkdir build
+    cd build
+    cmake .. -DCMAKE_BUILD_TYPE=Release
+    make && make test && make install
+
+The program will execute all included optimization algorithms
+on the Rosenbrock function of different dimensionality.
+
+
+Installation Windows
+--------------------
+
+Installation on Windows using the `Visual Studio` C++ compiler and
+`MSBuild.exe` from the command line (`cmd.exe`).
+Replace `Visual Studio 15 2017` by your Version.
+
+    mkdir build
+    cd build
+    cmake.exe -G"Visual Studio 15 2017" ..
+    MSBuild.exe ALL_BUILD.vcxproj /property:Configuration=Release
+    MSBuild.exe INSTALL.vcxproj /property:Configuration=Release
+
+Use the following commands to build and test the build
+of the core library. Testing is strongly recommended.
+
+    mkdir build
+    cd build
+    cmake.exe -G"Visual Studio 15 2017" ..
+    MSBuild.exe ALL_BUILD.vcxproj /property:Configuration=Release
+    MSBuild.exe RUN_TESTS.vcxproj /property:Configuration=Release
+    MSBuild.exe INSTALL.vcxproj /property:Configuration=Release
+*/
+
