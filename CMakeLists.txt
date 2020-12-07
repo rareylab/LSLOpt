@@ -64,6 +64,7 @@ if (LSLOpt_BUILD_TESTS)
                    EXCLUDE_FROM_ALL)
   add_subdirectory("${SOURCE_DIR}/Test")
   add_subdirectory("${SOURCE_DIR}/Examples")
+  add_subdirectory("${SOURCE_DIR}/PaperExamples")
 
   # generate meaningful coverage report. Requires the lcov tool
   if(${CMAKE_CXX_COMPILER_ID} MATCHES GNU AND ${LSLOpt_WITH_COVERAGE})
