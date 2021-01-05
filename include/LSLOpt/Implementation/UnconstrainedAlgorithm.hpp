@@ -145,6 +145,9 @@ Vector<Scalar> UnconstrainedAlgorithm<Problem, Scalar, Storage>::search_directio
      * Currently we do nothing in this case because it is not a huge problem.
      * Only if no progress can be made in the new direction (because it is e.g.
      * uphill direction) we have a problem. And this is handled anyway by restarting.
+     * Interestingle -- and in contrast to the bound constraint algorithm --
+     * this has never been observed to escalate, i.e. if there is a
+     * small numerical error it stays small and does not causeany  problems.
      */
     LSL_OUTPUT(output_function, OutputLevel::Status,
         "Relative error of search direction determination is " << relative_error

@@ -215,6 +215,10 @@ Vector<Scalar> BoxConstrainedAlgorithm<Problem, Scalar, Storage>::search_directi
   // The subspace minimum has been set to NaN if numerical problems
   // occurred during subspace minimization, see \ref subspace_min for details.
   if (ssm.unaryExpr(&scalar_traits<Scalar>::is_nan).any()) {
+    /**
+      * @todo It must be checked if this is something that just happens
+      * or if this points to some subtle bug.
+      */
     LSL_OUTPUT(output_function, OutputLevel::Warning,
         "Detected numerical instability during subspace minimization!");
   }

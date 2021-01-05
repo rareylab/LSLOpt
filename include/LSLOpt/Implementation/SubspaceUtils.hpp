@@ -193,11 +193,14 @@ Vector<Scalar> subspace_min_direction(
   Vector<Scalar> d = -Eigen::FullPivLU<Matrix<Scalar>>(rB).solve(r_c);
   Vector<Scalar> rBd = -rB * d;
 
-  /*
+  /**
+   * @todo
    * This is a step that can potentially suffer from (and also uncover)
    * numerical instabilities and problems, like indefinite matrices
    * (i.e. the initial matrix could have very small negative or very small
    *  complex eigenvalues, that should not be there).
+   * It should be checked if this just happens or if there is some
+   * subtle bug.
    *
    * If the error is to large, we return NaN that triggers
    * an optimization restart.
@@ -267,11 +270,14 @@ Vector<Scalar> subspace_min_direction(
 
     Vector<Scalar> Nv = N * v;
 
-    /*
+    /**
+     * @todo
      * This is a step that can potentially suffer from (and also uncover)
      * numerical instabilities and problems, like indefinite matrices
      * (i.e. the initial matrix could have very small negative or very small
      *  complex eigenvalues, that should not be there).
+     * It should be checked if this just happens or if there is some
+     * subtle bug.
      *
      * If the error is to large, we return NaN that triggers
      * an optimization restart.
