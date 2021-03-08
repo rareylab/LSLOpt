@@ -9,7 +9,7 @@ int main(int argc, char* argv[])
 {
   ModelSystem modelSystem;
 
-  // start with gamme = 67.5 deg
+  // start with gamma = 67.5 deg
   Eigen::VectorXd x0 = Eigen::VectorXd::Constant(1, 3*M_PI/8);
 
   LSLOpt::OptimizationParameters<double> params
