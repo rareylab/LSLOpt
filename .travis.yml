@@ -1,0 +1,20 @@
+language: c++
+dist: bionic
+
+before_install:
+  - sudo apt-get update
+  - sudo apt-get -y install cmake libeigen3-dev libboost-dev
+
+compiler:
+  - clang++
+  - g++
+
+before_script:
+  - mkdir build
+  - cd build
+  - cmake .. -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_FLAGS="-isystem/usr/include/eigen3"
+
+script:
+  - pwd
+  - make
+  - make test

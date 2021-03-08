@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.org/rareylab/LSLOpt.svg?branch=master)](https://travis-ci.org/rareylab/LSLOpt)
+[![Documentation Status](https://readthedocs.org/projects/lslopt/badge/?version=latest)](http://lslopt.readthedocs.io/en/latest/?badge=latest)
+
 LSLOpt 1.0
 ----------
 
