@@ -10,12 +10,14 @@ It is a collection of BFGS-type algorithms
 limitation of the step length in each iteration.
 
 It is developed at the
-Universitaet Hamburg, ZBH - Center for Bioinformatics
+[Universität Hamburg](https://www.uni-hamburg.de/), [ZBH - Center for Bioinformatics](http://www.zbh.uni-hamburg.de)
 by Florian Flachsenberg and Matthias Rarey.
 
-The library is distributed under BSD 3-Clause license,
-see the file LICENSE and [BSD 3-Clause]
-(https://opensource.org/licenses/BSD-3-Clause).
+Please cite the following papers describing the LSL-BFGS algorithm and the LSLOpt library:
+
+Flachsenberg, F., Meyder, A., Sommer, K., Penner, P., Rarey, M. A Consistent Scheme for Gradient-Based Optimization of Protein - Ligand Poses. J. Chem. Inf. Model., 2020, 60(12), pp 6502-6522. [doi: 10.1021/acs.jcim.0c01095](https://doi.org/10.1021/acs.jcim.0c01095)
+
+The library is distributed under the [BSD 3-Clause license](https://opensource.org/licenses/BSD-3-Clause).
 
 See documentation for detailed installation instructions.
 
