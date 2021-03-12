@@ -15,7 +15,9 @@ by Florian Flachsenberg and Matthias Rarey.
 
 Please cite the following papers describing the LSL-BFGS algorithm and the LSLOpt library:
 
-Flachsenberg, F., Meyder, A., Sommer, K., Penner, P., Rarey, M. A Consistent Scheme for Gradient-Based Optimization of Protein - Ligand Poses. J. Chem. Inf. Model., 2020, 60(12), pp 6502-6522. [doi: 10.1021/acs.jcim.0c01095](https://doi.org/10.1021/acs.jcim.0c01095)
+Flachsenberg, F., Meyder, A., Sommer, K., Penner, P., Rarey, M. A Consistent Scheme for Gradient-Based Optimization of Protein - Ligand Poses. *J. Chem. Inf. Model.* 2020, 60(12), pp 6502-6522. [doi: 10.1021/acs.jcim.0c01095](https://doi.org/10.1021/acs.jcim.0c01095)
+
+Flachsenberg, F., Rarey, M. LSLOpt: An Open-Source Implementation of the Step-Length Controlled LSL-BFGS Algorithm. *J. Comput. Chem.* 2021. *Manuscript accepted for publication.*
 
 The library is distributed under the [BSD 3-Clause license](https://opensource.org/licenses/BSD-3-Clause).
 
