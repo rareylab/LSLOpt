@@ -21,7 +21,6 @@ Flachsenberg, F., Rarey, M. LSLOpt: An Open-Source Implementation of the Step-Le
 
 The library is distributed under the [BSD 3-Clause license](https://opensource.org/licenses/BSD-3-Clause).
 
-See documentation for detailed installation instructions.
+The LSLOpt library makes use of the [Eigen 3](https://eigen.tuxfamily.org) library for linear algebra. The tests are written using the [GoogleTest](https://github.com/google/googletest) framework and partially use the [Boost.Multiprecision](https://www.boost.org/doc/libs/1_75_0/libs/multiprecision/doc/html/index.html) library for multiple-precision arithmetics.
 
-The documentation can be found in folder
-`documentation` as HTML and PDF document.
+See [documentation](http://lslopt.readthedocs.io/en/latest/?badge=latest) for detailed installation instructions and further information.
